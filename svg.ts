@@ -24,8 +24,8 @@ document.addEventListener('mousedown', (e:MouseEvent) => {
 document.addEventListener('mouseup', (e:MouseEvent) => {
      endTS.x=e.pageX;
      endTS.y = e.pageY
-     const settingsCircle:Array<number> = calculateCircleTS(start.x, start.y, end.x, end.y)
-    svg.insertAdjacentHTML("afterbegin", `<circle cx=${settingsCircle} cy=${settingsCircle} r=${settingsCircle} fill='red'/>`)
+     const settingsCircle:Array<number> = calculateCircleTS(startTS.x, startTS.y, endTS.x, endTS.y)
+     svgTS.insertAdjacentHTML("afterbegin", `<circle cx=${settingsCircle[0]} cy=${settingsCircle[0]} r=${settingsCircle[0]} fill='red'/>`)
    })
    
 const calculateCircleTS=(startX:number, startY:number, endX:number, endY:number):Array<number> => {
