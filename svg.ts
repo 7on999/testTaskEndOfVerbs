@@ -21,7 +21,7 @@ document.addEventListener('mousedown', (e:MouseEvent) => {
        start.y = e.pageY
 })
    
-document.addEventListener('mouseup', (e) => {
+document.addEventListener('mouseup', (e:MouseEvent) => {
      end.x=e.pageX;
      end.y = e.pageY
      const settingsCircle:Array<number> = calculateCircleTS(start.x, start.y, end.x, end.y)
