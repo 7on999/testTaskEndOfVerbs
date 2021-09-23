@@ -6,13 +6,13 @@ type coordinatesType = {
 }
  
 const startTS:coordinatesType = {
-     x:0,
-     y:0
+     x: 0,
+     y: 0
 }
  
 const endTS:coordinatesType = {
-     x:0,
-     y:0
+     x: 0,
+     y: 0
 }
  
    
