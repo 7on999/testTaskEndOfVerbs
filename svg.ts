@@ -17,13 +17,13 @@ const endTS:coordinatesType = {
  
    
 document.addEventListener('mousedown', (e:MouseEvent) => {
-       start.x = e.pageX;
-       start.y = e.pageY
+       startTS.x = e.pageX;
+       startTS.y = e.pageY
 })
    
 document.addEventListener('mouseup', (e:MouseEvent) => {
-     end.x=e.pageX;
-     end.y = e.pageY
+     endTS.x=e.pageX;
+     endTS.y = e.pageY
      const settingsCircle:Array<number> = calculateCircleTS(start.x, start.y, end.x, end.y)
     svg.insertAdjacentHTML("afterbegin", `<circle cx=${settingsCircle} cy=${settingsCircle} r=${settingsCircle} fill='red'/>`)
    })
