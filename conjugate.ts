@@ -1,4 +1,4 @@
-const conjugateTS = (infinitive:string, pronoun:string) => {
+const conjugateTS = (infinitive:string, pronoun:string):string => {
 
      let secondСonjugation:boolean = false;
      let reflexiveVerb:boolean = false;
