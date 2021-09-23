@@ -54,10 +54,8 @@ const conjugateTS = (infinitive:string, pronoun:string) => {
                   infinitiveArr.splice(lengthInfinitive-4,4, 'eтесь')
                  return infinitiveArr.join('')
              case 'он' :
-                  infinitiveArr.splice(lengthInfinitive-4,4, 'eтся');
-                  return infinitiveArr.join('')
              case 'она':
-                  infinitiveArr.splice(lengthInfinitive-4,4, 'eтся')
+                  infinitiveArr.splice(lengthInfinitive-4,4, 'eтся');
                   return infinitiveArr.join('')
              case 'оно':
                    infinitiveArr.splice(lengthInfinitive-4,4, 'eтся')
@@ -88,11 +86,9 @@ const conjugateTS = (infinitive:string, pronoun:string) => {
                infinitiveArr.splice(lengthInfinitive-4,4, 'тесь')
               return infinitiveArr.join('')
           case 'он' :
-               infinitiveArr.splice(lengthInfinitive-4,4, 'тся');
-               return infinitiveArr.join('')
           case 'она':
-               infinitiveArr.splice(lengthInfinitive-4,4, 'тся')
-               return infinitiveArr.join('')
+               infinitiveArr.splice(lengthInfinitive-4,4, 'тся');
+               return infinitiveArr.join('')       
           case 'оно':
                 infinitiveArr.splice(lengthInfinitive-4,4, 'тся')
                 return infinitiveArr.join('')
@@ -145,12 +141,10 @@ const conjugateTS = (infinitive:string, pronoun:string) => {
                return infinitiveArr.join('')
            
            case 'он':
+          case 'она' :
                 infinitiveArr.splice(lengthInfinitive-3, 3, 'ит');
                 return infinitiveArr.join('')
-           case 'она' :
-                infinitiveArr.splice(lengthInfinitive-3, 3, 'ит');
-                return infinitiveArr.join('')
-   
+                   
            case 'они':
  
                 if (infinitiveArr[lengthInfinitive-4]==='ч'||infinitiveArr[lengthInfinitive-4]==='ж'||
@@ -407,6 +401,7 @@ const conjugateTS = (infinitive:string, pronoun:string) => {
             return infinitiveArr.join('')
          
          case 'он':
+         case 'она':
  
            if((infinitiveArr[lengthInfinitive-5]==='ы'|| infinitiveArr[lengthInfinitive-5]==='и') && infinitiveArr[lengthInfinitive-4]==='в'&&
            infinitiveArr[lengthInfinitive-3]==='а'){
@@ -454,61 +449,7 @@ const conjugateTS = (infinitive:string, pronoun:string) => {
  
            infinitiveArr.splice(lengthInfinitive-2, 2, 'eт');
            return infinitiveArr.join('')
- 
-         case 'она' :
- 
-           if((infinitiveArr[lengthInfinitive-5]==='ы'|| infinitiveArr[lengthInfinitive-5]==='и') && infinitiveArr[lengthInfinitive-4]==='в'&&
-           infinitiveArr[lengthInfinitive-3]==='а'){
-                infinitiveArr.splice(lengthInfinitive-2, 2, 'ет');
-                return  infinitiveArr.join('')}
- 
-           if((infinitiveArr[lengthInfinitive-5]==='о'||infinitiveArr[lengthInfinitive-5]==='е')&&infinitiveArr[lengthInfinitive-4]==='в'&&
-           infinitiveArr[lengthInfinitive-3]==='а'){
-                infinitiveArr.splice(lengthInfinitive-5, 5, 'ует');
-                return  infinitiveArr.join('')}
- 
-           if(infinitiveArr[lengthInfinitive-4]==='з'){
-                infinitiveArr.splice(lengthInfinitive-4, 4, 'жет');
-                return  infinitiveArr.join('')}
- 
-           if(infinitiveArr[lengthInfinitive-4]==='к'){
-                 infinitiveArr.splice(lengthInfinitive-4, 4, 'чет');
-                 return  infinitiveArr.join('')}
- 
-           if(infinitiveArr[1]==='п'&&lengthInfinitive<=5){
-                 infinitiveArr.splice(lengthInfinitive-3, 3, 'ит');
-                 return  infinitiveArr.join('')}
- 
-           if(infinitiveArr[lengthInfinitive-4]==='р'&& isOneVowel(infinitive)&&lengthInfinitive<=4){
-                 infinitiveArr.splice(lengthInfinitive-3, 3, 'оет');
-                 return  infinitiveArr.join('')}
- 
-           if((lengthInfinitive<=5&&(infinitiveArr[lengthInfinitive-4]==='р'||infinitiveArr[lengthInfinitive-4]==='д')
-                 ||isOneVowel(infinitive)&&infinitiveArr[lengthInfinitive-5]==='р')){
-                 infinitiveArr.splice(lengthInfinitive-3, 3, 'ёт');
-                 return  infinitiveArr.join('')}
- 
-           if(isOneVowel(infinitive)&&(infinitiveArr[lengthInfinitive-4]==='ш'||infinitiveArr[lengthInfinitive-4]==='л'
-           ||infinitiveArr[lengthInfinitive-4]==='п'||infinitiveArr[lengthInfinitive-4]==='б')){
-                 infinitiveArr.splice(lengthInfinitive-3, 3, 'ьёт');
-                 return  infinitiveArr.join('')}
- 
-           if(infinitiveArr[lengthInfinitive-4]==='г'&& isOneVowel(infinitive)){
-                 infinitiveArr.splice(lengthInfinitive-3, 3, 'жёт');
-                 return  infinitiveArr.join('')}
- 
-           if((infinitiveArr[lengthInfinitive-4]==='п'&& !isOneVowel(infinitive))||(infinitiveArr[lengthInfinitive-4]==='п'&& !isOneVowel(infinitive))
-           ||(infinitiveArr[lengthInfinitive-4]==='ч')){
-                infinitiveArr.splice(lengthInfinitive-3, 3, 'ит');
-                 return  infinitiveArr.join('')}
- 
-            if(infinitiveArr[lengthInfinitive-1]==='и'&&infinitiveArr[lengthInfinitive-2]==='т'&&lengthInfinitive>4){
-                infinitiveArr.splice(lengthInfinitive-2, 2, 'дет');
-                 return  infinitiveArr.join('')}
-     
-           infinitiveArr.splice(lengthInfinitive-2, 2, 'eт');
-           return infinitiveArr.join('')
- 
+  
          case 'они':
  
            if((infinitiveArr[lengthInfinitive-5]==='ы'|| infinitiveArr[lengthInfinitive-5]==='и') && infinitiveArr[lengthInfinitive-4]==='в'&&
